@@ -1,0 +1,49 @@
+---
+import Layout from "~/layouts/PageLayout.astro";
+
+import { SITE } from "~/config.mjs";
+
+import Hero from "~/components/widgets/Hero.astro";
+import BasicCTA from "~/components/widgets/BasicCTA.astro";
+import BasicFeatures from "~/components/widgets/BasicFeatures.astro";
+import StepsFeatures from "~/components/widgets/StepsFeatures.astro";
+import BasicFAQs from "~/components/widgets/BasicFAQs.astro";
+import TwoColsFeatures from "~/components/widgets/TwoColsFeatures.astro";
+import StepsLeft from "~/components/widgets/StepsLeft.astro";
+import BlogFeaturesPosts from "~/components/widgets/BlogFeaturesPosts.astro";
+import Stats from "~/components/widgets/Stats.astro";
+import Contact from "~/components/widgets/Contact.astro";
+const title = `${SITE.name} —  Contact`;
+const description = "Contact me today for a FREE quote";
+const canonical = new URL("", Astro.site);
+---
+
+<Layout meta={{ title, description, canonical }}>
+  <main class="mt-20">
+    <section>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="py-12 md:py-20">
+          <div class="text-center pb-12 md:pb-16">
+            <h1
+              class="text-5xl md:text-[3.50rem] font-bold leading-tighter tracking-tighter mb-4"
+            >
+              Welcome to
+              <span
+                class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-pink-500"
+                >Contact
+              </span>
+            </h1>
+            <div class="max-w-3xl mx-auto">
+              <p class="text-xl text-gray-600 mb-8 dark:text-slate-400">
+                Use the form below to contact me for a FREE quote.
+              </p>
+              <div class="max-w-none flex justify-center"></div>
+            </div>
+          </div>
+          <div></div>
+        </div>
+      </div>
+    </section>
+    <Contact />
+  </main>
+</Layout>
